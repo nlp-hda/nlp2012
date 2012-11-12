@@ -57,11 +57,11 @@ class App:
 		readDBTags()
 
 		#print "Test: "+categoryList[3].getCategoryName()
-#		for item in categoryList:
-#			print item.getCategoryName()
-#			App.listBoxCategory.insert(END,item.getCategoryName())
-#			for entry in item.getCategoryItemList():
-#				App.listBoxCaItems.insert(END,entry)
+		for item in categoryList:
+			print item.getCategoryName()
+			App.listBoxCategory.insert(END,item.getCategoryName())
+			for entry in item.getCategoryItemList():
+				App.listBoxCaItems.insert(END,entry)
 
 
 
@@ -98,20 +98,14 @@ class Text:
 
 def readDBTags():
 	print "Reading DB Tags file ...... "
-	file = open('db.txt')
+	file = open('tags_IT.txt')
 	lines = file.readlines()
 
 	for line in lines:
 		categorySplit = line.split(';')
-
 		category = Category(categorySplit[0])
 		category.setCategoryItems(categorySplit)
-		print category.getCategoryName()
-		print categoryList.append(category)
-
-	print "Anzahl Tag items: ",len(categoryList)
-	for item in categoryList:
-		print item.getCategoryName()
+		categoryList.append(category)
 	
 
 
