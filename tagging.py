@@ -15,69 +15,53 @@ class App:
 		self.makeMenuBar(frame)
 		frame.pack()
 
-		#master.minsize(500,500)
-		#master.maxsize(1000,1000)
-		text = Text(master)
-		scroll = Scrollbar(master)
-		scroll.pack(side=RIGHT, fill=Y)
-		#self.button = Button(frame, text="QUIT", fg="red", command=frame.quit)
-		#self.button.pack(side=LEFT)
 
-		#self.readDBTags = Button(frame, text="Read DB Tags", command=self.onLoadDBTags)
-		#self.readDBTags.pack(side=LEFT)
-
-		App.listBox = Listbox(master)
-		App.listBox.pack()
-		App.listBox.insert(END,"Category")
+		App.label = Label(master,text="Category").pack(side=TOP,anchor='w')
 		
+		scroll = Scrollbar(master)	
+		App.listBoxCategory = Listbox(master,height=10,width=30,)
 
-		#self.readDBTexte = Button(frame, text="Read DB Texte", command=readDBTexte)
-		#self.readDBTexte.pack(side=LEFT)
+		App.listBoxCaItems = Listbox(master,height=10,width=50,)
+		App.listBoxCategory.pack(side=LEFT,fill=Y)
+		App.listBoxCaItems.pack(side=RIGHT,fill=Y)
+		scroll.pack(side=RIGHT, fill=Y)
+		
+		
+		App.listBoxCategory.config(yscrollcommand=scroll.set)
+		scroll.config(command=App.listBoxCategory.yview)
 
-
+	
 
 	
 	def makeMenuBar(self,frame):
 		menubar = Frame(frame,relief=RAISED,borderwidth=1)
-		menubar.pack()
+		menubar.pack(side=LEFT)
 		
-		#A menu in Tk is a combination of a Menubutton (the title of the
-  	    #menu) and the Menu (what drops down when the Menubutton is pressed)
-       		
 		mb_file = Menubutton(menubar,text='file')
 		mb_file.pack(side=LEFT)
 		mb_file.menu = Menu(mb_file)
 		
-		#Once we've specified the menubutton and the menu, we can add
-        #different commands to the menu
-		
-		mb_file.menu.add_command(label='open tag file')
+		mb_file.menu.add_command(label='open tag file',command=self.onLoadDBTags)
 		mb_file.menu.add_command(label='open text file')
 		mb_file.menu.add_command(label='close')
-		
-		mb_edit = Menubutton(menubar,text='edit')
-		mb_edit.pack(side=LEFT)
-		mb_edit.menu = Menu(mb_edit)
-		mb_edit.menu.add_command(label='copy')
-		mb_edit.menu.add_command(label='paste')
 		
 		mb_help = Menubutton(menubar,text='help')
 		mb_help.pack(padx=25,side=RIGHT)
 		
 		mb_file['menu'] = mb_file.menu
-		mb_edit['menu'] = mb_edit.menu
 		return
 
 
 
 	def onLoadDBTags(self):
 		readDBTags()
-		i=0
-		App.listBox.insert(END,"=================")
-		for item in categoryList:
-			App.listBox.insert(END,item.getCategoryName())
-			for entry in item.getCategoryItemList():
-				App.listBox.insert(END,"-"+entry)
+
+		#print "Test: "+categoryList[3].getCategoryName()
+#		for item in categoryList:
+#			print item.getCategoryName()
+#			App.listBoxCategory.insert(END,item.getCategoryName())
+#			for entry in item.getCategoryItemList():
+#				App.listBoxCaItems.insert(END,entry)
 
 
 
@@ -112,8 +96,6 @@ class Text:
 		return Text.text
 
 
-
-
 def readDBTags():
 	print "Reading DB Tags file ...... "
 	file = open('db.txt')
@@ -121,10 +103,15 @@ def readDBTags():
 
 	for line in lines:
 		categorySplit = line.split(';')
+
 		category = Category(categorySplit[0])
 		category.setCategoryItems(categorySplit)
-		categoryList.append(category)
+		print category.getCategoryName()
+		print categoryList.append(category)
+
 	print "Anzahl Tag items: ",len(categoryList)
+	for item in categoryList:
+		print item.getCategoryName()
 	
 
 
