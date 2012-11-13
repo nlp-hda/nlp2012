@@ -1,9 +1,0 @@
-Teffen:
-
-Dienstag 13.11.2012 14Uhr
-- Taballarischen Form und keine Wörterstatisik
-- Programmiersprache Python 
-- Datenbank nicht nötig
-- Repository -> github.com https://github.com/nlp-hda/nlp2012/admin/collaboration
-TODO:
-- Parser -> Sätze erkennen und abspeichern

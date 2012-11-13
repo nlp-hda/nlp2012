@@ -1,0 +1,9 @@
+Meeting:
+
+Tuesday 11/13/2012 14pm
+- We decided to work out the dictionary solution  
+- Programming language is Python 
+- Database not required
+- Repository -> github.com https://github.com/nlp-hda/nlp2012
+TODO:
+- Parser -> sentence recognise
