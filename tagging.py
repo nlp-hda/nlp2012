@@ -6,8 +6,6 @@ import re
 import Tkinter
 from Tkinter import *
 
-dbFileName = "db.txt"
-
 class App:
 	
 	def __init__(self, master):
@@ -66,20 +64,17 @@ class App:
 
 
 class Category:
-	name = ""
-	itemList = []
-
 	def __init__(self,str):
-		Category.name = str
+		self.name = str
 
 	def setCategoryItems(self,itemList):
-		Category.itemList = itemList
+		self.itemList = itemList
 
 	def getCategoryName(self):
-		return Category.name
+		return self.name
 
 	def getCategoryItemList(self):
-		return Category.itemList
+		return self.itemList
 
 
 class Text:
