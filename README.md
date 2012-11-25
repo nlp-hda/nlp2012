@@ -17,5 +17,13 @@ Program Demo
 <img src="https://raw.github.com/nlp-hda/nlp2012/master/pictures/Initial_Program.png" />
 
 
+
+Tags & Dictionary Database
+--------------------------
+
+The [NLP Website][3] can make comma seperated files from the entries in the Database (IT and Medical).
+
+
 [1]: http://www.activestate.com/activepython/downloads
 [2]: https://github.com/nlp-hda/nlp2012/archive/master.zip
+[3]: http://www.nlp.ah-labs.com
