@@ -25,6 +25,10 @@ The [NLP Website][3] can make semicolon seperated files from the entries in the 
 
 `Example: tag_IT.txt , tag_Medical.txt`
 
+<img src="https://raw.github.com/nlp-hda/nlp2012/master/pictures/website.png" />
+
+
+
 [1]: http://www.activestate.com/activepython/downloads
 [2]: https://github.com/nlp-hda/nlp2012/archive/master.zip
 [3]: http://www.nlp.ah-labs.com
