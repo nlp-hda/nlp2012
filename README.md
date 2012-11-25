@@ -21,8 +21,9 @@ Program Demo
 Tags & Dictionary Database
 --------------------------
 
-The [NLP Website][3] can make comma seperated files from the entries in the Database (IT and Medical).
+The [NLP Website][3] can make semicolon seperated files from the entries in the Database (IT and Medical).
 
+`Example: tag_IT.txt , tag_Medical.txt`
 
 [1]: http://www.activestate.com/activepython/downloads
 [2]: https://github.com/nlp-hda/nlp2012/archive/master.zip
