@@ -1,7 +1,23 @@
 NATURAL LANGUAGE PROCESSING PROJECT 2012
 ========================================
 
+
+Program World Counter 
+--------------------- 
+A word counter implemented in Java. You can download this on the following git repository:
+https://github.com/rufchr/WordCounter4NLP
+
 Installation
+------------
+1. Create a Project in Netbeans or Eclipse
+2. Copy those files into the Projekt
+
+
+
+Program Tagging
+---------------------
+
+Installation 
 ------------
 
 * Windows 
@@ -9,7 +25,7 @@ Installation
 1. Install [Active Python 2.7.2+] [1]
 2. Copy the [Source Code][2] in the zip format and save it in your hard drive 
 3. Unzip the folder and run "tagging.py"
-	
+
 
 Program Demo
 ------------
