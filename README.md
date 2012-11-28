@@ -15,7 +15,7 @@ Installation
 
 
 Program Tagging
----------------------
+===============
 
 Installation 
 ------------
@@ -33,7 +33,6 @@ Program Demo
 <img src="https://raw.github.com/nlp-hda/nlp2012/master/pictures/Initial_Program.png" />
 
 
-
 Tags & Dictionary Database
 --------------------------
 
@@ -43,7 +42,6 @@ The [NLP Website][3] can make semicolon seperated files from the entries in the 
 
 <img src="https://raw.github.com/nlp-hda/nlp2012/master/pictures/website.png" />
 <img src="https://raw.github.com/nlp-hda/nlp2012/master/pictures/tag_entries.png" />
-
 
 
 [1]: http://www.activestate.com/activepython/downloads
