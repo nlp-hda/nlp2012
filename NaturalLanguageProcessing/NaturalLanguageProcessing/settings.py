@@ -3,8 +3,9 @@ import os
 import django
 # calculated paths for django and the site
 # used as starting points for various other paths
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-
+SITE_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+DATABASE_PATH = SITE_ROOT+'/database/nlp.db'
+MEDIA_PATH = SITE_ROOT+'/assets/'
 # Django settings for NaturalLanguageProcessing project.
 
 DEBUG = True
@@ -19,7 +20,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(SITE_ROOT, 'database') + '/nlp.db',# Or path to database file if using sqlite3.
+        'NAME': DATABASE_PATH,# Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -49,10 +50,9 @@ USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
-
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(SITE_ROOT, 'assets')
+MEDIA_ROOT = MEDIA_PATH
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
