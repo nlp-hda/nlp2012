@@ -5,13 +5,22 @@ from django.db import models
 class Term(models.Model):
 	name = models.CharField(max_length=50)
 
+	def __unicode__(self):
+        	return self.name
+
 class Word(models.Model):
 	name = models.CharField(max_length=100)
+
+	def __unicode__(self):
+        	return self.name
 
 class Text(models.Model):
 	name = models.CharField(max_length=50)
 	text = models.TextField()
 	words = models.ManyToManyField(Word, through='TextHasWords')
+
+	def __unicode__(self):
+        	return self.name
 
 class TextHasWords(models.Model):
 	text = models.ForeignKey(Text)
@@ -22,6 +31,12 @@ class Domain(models.Model):
 	name = models.CharField(max_length=50)
 	terms = models.ManyToManyField(Term)
 	texts = models.ManyToManyField(Text)
+
+	def __unicode__(self):
+        	return self.name
 	
 class Blacklist(models.Model):
 	name = models.CharField(max_length=100)
+
+	def __unicode__(self):
+        	return self.name
