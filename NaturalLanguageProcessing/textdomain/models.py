@@ -23,3 +23,5 @@ class Domain(models.Model):
 	terms = models.ManyToManyField(Term)
 	texts = models.ManyToManyField(Text)
 	
+class Blacklist(models.Model):
+	name = models.CharField(max_length=100)
