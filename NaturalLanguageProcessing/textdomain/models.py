@@ -18,6 +18,7 @@ class Text(models.Model):
 	name = models.CharField(max_length=100)
 	text = models.TextField()
 	words = models.ManyToManyField(Word, through='TextHasWords')
+	count = models.IntegerField()
 
 	def __unicode__(self):
         	return self.name

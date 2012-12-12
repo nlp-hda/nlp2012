@@ -29,7 +29,10 @@ class Tokenizer(object):
 		black=[]
 		for b in self.blacklist:
 				black.append(b.name)
-		
+	
+		self.textobject.count = len(token_word)
+		self.textobject.save()
+	
 		for t in token_word:
 			if m.match(t) and t.upper() not in black:
 				tokenized_list.append(t.upper()) 
@@ -39,9 +42,8 @@ class Tokenizer(object):
 		words=[]
 		for w in dictionary:
 			words.append(WordCount(w,dictionary[w]))    	
-			print(w)
+
 		for w in words:
-			
 			try:
     				word = Word.objects.get(name=w.name)
 			except Word.DoesNotExist:
