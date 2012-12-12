@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from textdomain.models import Domain, Text, Term, Word, TextHasWords
 from textdomain.tokenize import Tokenizer, WordCount
-from chartit import PivotDataPool, PivotChart
 
 def home(request):
 	html = "<html>"
