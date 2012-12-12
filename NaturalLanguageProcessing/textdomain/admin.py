@@ -1,4 +1,4 @@
-from textdomain.models import Domain, Blacklist, Text 
+from textdomain.models import Domain, Blacklist, Text, Word 
 from django.contrib import admin
 
 class DomainAdmin(admin.ModelAdmin):
@@ -15,4 +15,5 @@ class BlacklistAdmin(admin.ModelAdmin):
     fields = ['name']
 
 admin.site.register(Blacklist, BlacklistAdmin)
+admin.site.register(Word)
 
