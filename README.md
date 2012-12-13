@@ -1,6 +1,11 @@
 NATURAL LANGUAGE PROCESSING PROJECT 2012
 ========================================
 
+Web Application
+---------------
+An implementation with django
+https://github.com/Djcd/NLPTextStats.git
+
 
 Program World Counter 
 --------------------- 
