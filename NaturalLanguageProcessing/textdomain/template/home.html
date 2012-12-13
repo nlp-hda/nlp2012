@@ -12,9 +12,20 @@
 		</select>
 	</form>
 
-	{{ text_object }}	
 	{% if text_object %}
 		<h4> {{ text_object.name }}</h4>
 		{{ text_object.text }}
+	{% endif %}
+
+	{% if analyse %}
+		<form action="/home/" method="GET">
+                	<input type="hidden" name="analyse" value="1"/>
+                	<input type="hidden" name="id" value="{{ text_object.id }}"/>
+                	<input type="submit" value=" Analyze text ">
+                </form>
+	{% endif %}
+
+	{% if word_name and word_count %}
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 	{% endif %}
 {% endblock %}

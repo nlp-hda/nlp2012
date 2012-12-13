@@ -4,6 +4,77 @@
 	<script src="/media/jquery.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<title>{% block title %}My amazing site{% endblock %}</title>
+
+	{% if word_name and word_count %}	
+	<script type="text/javascript">
+		(function($){ // encapsulate jQuery
+
+		$(function () {
+    		var chart;
+    			$(document).ready(function() {
+       			chart = new Highcharts.Chart({
+            			chart: {
+                			renderTo: 'container',
+                			type: 'column',
+                			margin: [ 50, 50, 100, 80]
+            			},
+            			title: {
+                			text: 'Text analyser'
+            			},
+            			xAxis: {
+                			categories: [
+						{{ word_name }}
+                			],
+                			labels: {
+                    				rotation: -45,
+                    				align: 'right',
+                    				style: {
+                        				fontSize: '13px',
+                        				fontFamily: 'Verdana, sans-serif'
+                   	 			}
+                			}
+            			},
+            			yAxis: {
+                			min: 0,
+                			title: {
+             	       				text: 'Counted Words'
+                			}
+            			},
+            			legend: {
+                			enabled: false
+            			},
+            			tooltip: {
+                			formatter: function() {
+                    			return '<b>'+ this.x +'</b><br/>'+'Counted times in this text: '+ Highcharts.numberFormat(this.y, 1);
+                		}
+            		},
+                	series: [{
+                		name: 'Words',
+                		data: [
+					{{ word_count }}
+		      		],
+                		dataLabels: {
+                    			enabled: true,
+                    			rotation: -90,
+                    			color: '#FFFFFF',
+                    			align: 'right',
+                    			x: -3,
+                    			y: 10,
+                    			formatter: function() {
+                        			return this.y;
+                    			},
+                    			style: {
+                        			fontSize: '13px',
+                        			fontFamily: 'Verdana, sans-serif'
+                    			}
+                		}
+            		}]
+        		});
+    		});
+    		});
+		})(jQuery);
+	</script>
+	{% endif %}
 </head>
 
 <body>
