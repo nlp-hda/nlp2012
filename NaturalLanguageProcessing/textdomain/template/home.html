@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Texts{% endblock %}
+
+{% block content %}
+	<form action="/home/" method="GET">
+		<select name="id" onChange="this.form.submit()">
+			<option></option>
+			{% for text in text_list %}
+    				<option value="{{ text.id }}">{{ text.name }}</option>
+			{% endfor %}
+		</select>
+	</form>
+
+	{% if text_object %}
+		<h4> text_object.name </h4>
+		text_object.text
+	{% endif %}
+{% endblock %}
