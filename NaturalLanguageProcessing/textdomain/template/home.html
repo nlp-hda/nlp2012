@@ -12,8 +12,9 @@
 		</select>
 	</form>
 
+	{{ text_object }}	
 	{% if text_object %}
-		<h4> text_object.name </h4>
-		text_object.text
+		<h4> {{ text_object.name }}</h4>
+		{{ text_object.text }}
 	{% endif %}
 {% endblock %}

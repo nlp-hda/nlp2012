@@ -5,7 +5,6 @@ from textdomain.models import Domain, Text, Term, Word, TextHasWords
 from textdomain.tokenize import Tokenizer, WordCount
 
 def home(request):
-	
 	text_list = Text.objects.all()
 
 	template = loader.get_template('home.html')
@@ -15,6 +14,8 @@ def home(request):
 	})
 		
 	if request.method is 'GET':
+		print "in get"
+
 		id = request.GET.get('id', '')
 		analyse = request.GET.get('analyse', '')
 		if id:
