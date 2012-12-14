@@ -1,64 +1,17 @@
 
 import string
 import re
+import codecs
+
+from nltk.tokenize import wordpunct_tokenize
+from nltk.tokenize import TreebankWordTokenizer
+from nltk.probability import FreqDist
+import nltk.data
 
 import Tkinter
 from Tkinter import *
+from tk_app import App
 
-from nltk.tokenize import word_tokenize,wordpunct_tokenize
-from nltk.tokenize import TreebankWordTokenizer
-from nltk.probability import FreqDist
-
-class App:
-	
-	def __init__(self, master):
-		frame = Frame(master)
-		self.makeMenuBar(frame)
-		frame.pack()
-
-		App.label = Label(master,text="Category").pack(side=TOP,anchor='w')
-		
-		scroll = Scrollbar(master)	
-		App.listBoxCategory = Listbox(master,height=10,width=30,)
-
-		App.listBoxCaItems = Listbox(master,height=10,width=50,)
-		App.listBoxCategory.pack(side=LEFT,fill=Y)
-		App.listBoxCaItems.pack(side=RIGHT,fill=Y)
-		scroll.pack(side=RIGHT, fill=Y)
-		
-		App.listBoxCategory.config(yscrollcommand=scroll.set)
-		scroll.config(command=App.listBoxCategory.yview)
-
-	
-	
-	def makeMenuBar(self,frame):
-		menubar = Frame(frame,relief=RAISED,borderwidth=1)
-		menubar.pack(side=LEFT)
-		
-		mb_file = Menubutton(menubar,text='file')
-		mb_file.pack(side=LEFT)
-		mb_file.menu = Menu(mb_file)
-		
-		mb_file.menu.add_command(label='open tag file',command=self.onLoadDBTags)
-		mb_file.menu.add_command(label='open text file')
-		mb_file.menu.add_command(label='close')
-		
-		mb_help = Menubutton(menubar,text='help')
-		mb_help.pack(padx=25,side=RIGHT)
-		
-		mb_file['menu'] = mb_file.menu
-		return
-
-
-	def onLoadDBTags(self):
-		readDBTags()
-
-		#print "Test: "+categoryList[3].getCategoryName()
-		for item in categoryList:
-			#print item.getCategoryName()
-			App.listBoxCategory.insert(END,item.getCategoryName())
-			for entry in item.getCategoryItemList():
-				App.listBoxCaItems.insert(END,entry)
 
 class Category:
 	def __init__(self,str):
@@ -86,38 +39,81 @@ class Text:
 	def getText(self):
 		return Text.text
 
+class MyTokenizer:
+	def __init__(self,inputText):
+		self.inputText = inputText
 
-class MyTreebankWordTokenizer:
-	def __init__(self,read):
-		self.read = read;
-		self.token_word=[]
-
-	def tokenizeInput(self):
+	def getWordToken(self):
 		token = TreebankWordTokenizer()
-		self.token_word = wordpunct_tokenize(self.read)	
+		token_word = wordpunct_tokenize(self.inputText)
+		return token_word
 
-	def getTokenWords(self):
-		return self.token_word
+	def getSentenceToken(self):
+		sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
+		sent_list = '\n'.join(sent_detector.tokenize(self.inputText.strip(), realign_boundaries=True)).split('\n')
+		return sent_list
 
-
+# blacklist/filter class
 class MyBlackList():
-	def __init__(self,file):
-		self.file = file
-		self.blacklist=[]
+	def __init__(self,balckListFile,token_word):
+		self.token_word = token_word
+		self.balckListFile = balckListFile
+		self.loadBlackListFile()
+		self.cleanToken()
+		self.blackListTokens()
 
-	def loadBlackListFile(self,file):
-		inputfile_blacklist = open('Blacklist_UTF8.txt', 'r')
+	def loadBlackListFile(self):
+		inputfile_blacklist = open(self.balckListFile, 'r')
 		self.blacklist = inputfile_blacklist.read()	
 
+	def cleanToken(self):
+		m = re.compile(r'[0-9a-zA-Z]')
+		self.clean_token=[]
+		for t in self.token_word:
+			if m.match(t):
+				self.clean_token.append(t) 
+			#print t
+
+	def blackListTokens(self):
+		self.tokenListBlacklist=[]
+		for c in self.clean_token:
+			 if c.upper() not in self.blacklist:
+			  	self.tokenListBlacklist.append(c.upper())
 
 	def getBlacklist(self):
-		self.loadBlackListFile(file)
-		return self.blacklist
+		return self.tokenListBlacklist
 
 
-class Filter():
-	def __init__(self):
-		print ""
+
+class ReadInput():
+	def __init__(self,textFile):
+		self.textFile = textFile
+		self.readText()
+
+	def readText(self):
+		inputfile = open(self.textFile, 'r')	
+		self.text = inputfile.read()
+		inputfile.close()
+
+	def getText(self):
+		return self.text
+
+
+class WordCounter():
+	def __init__(self,tokenList):
+		self.tokenList = tokenList
+		self.count()
+
+	def count(self):
+		self.dictionary = FreqDist(self.tokenList)
+
+	def getWordCount(self):
+		return self.dictionary
+
+
+
+
+
 
 
 
@@ -131,106 +127,47 @@ def readDBTags():
 		category = Category(categorySplit[0])
 		category.setCategoryItems(categorySplit)
 		categoryList.append(category)
-	#print len(categoryList)
-
-def readDBTexte():
-	print "Reading DB Text file ...... "
-	file = open('texteA_M.txt')
-	lines = file.readlines()
-
-	for line in lines:
-		lineSplit = line.split(';;')
-		text = Text(lineSplit[0])
-		if(len(lineSplit) > 2):
-			print "panic"
-		lineSplit.pop(0)
-		text.setText(lineSplit)
-		textList.append(text)
-	print "Anzahl Texte: ",len(textList)
-
-
-def readInputText():
-	inputfile = open('it.txt', 'r')
-	
-	outputfile = open('output_file.txt', 'w')
-
-	read = inputfile.read()
-
-	myBlacklist = MyBlackList('toImpl')
-	blacklist = myBlacklist.getBlacklist()
-
-	myToken = MyTreebankWordTokenizer(read)	
-	myToken.tokenizeInput()
-	token_word = myToken.getTokenWords()
-
-	
-
-	m = re.compile(r'[0-9a-zA-Z]')
-	clean_token=[]
-	for t in token_word:
-		if m.match(t):
-			clean_token.append(t) 
-			#print t
-
-	tokenized_list=[]
-	for c in clean_token:
-		 if c.upper() not in blacklist:
-		  	tokenized_list.append(c.upper())
-
-	#print len(tokenized_list)
-
-	dictionary = FreqDist(tokenized_list)
-
-	for word in dictionary:
-	    pair = word + ',' + str(dictionary[word])
-	    #print pair
-	    outputfile.write(pair+'\n')
-	    
-	highlighted_list=[]
-
-	#print len(categoryList.getCategoryItemList())
-	#for word in categoryList:
-	#	print word
-	#for tag in categoryList.getCategoryItemlList():
-	#for tag in categoryList:
-		#for word in tokenized_list:
-			#for entry in tag.getCategoryItemList():
-				#print entry
-			# 	highlighted_list.append(tag + " -----------") #IN ROT
-			# else:
-			# 	highlighted_list.append(tag)
-	
-	for tag in categoryList:		
-		for entry in tag.getCategoryItemList():
-			if entry in tokenized_list:
-				print entry + " +++++++++ "
-			else:
-				print entry + " "
-
-#	for word in highlighted_list:
-#		print word
-
-	inputfile.close()
-	outputfile.close()
 
 
 categoryList = []
-textList = []
-
-
-
-
-
 readDBTags()
-readInputText()
+
+inputText = ReadInput('it.txt')
+	
+myToken = MyTokenizer(inputText.getText())	
+token_word = myToken.getWordToken()
+
+token_sentences = myToken.getSentenceToken()
+
+myBlacklist = MyBlackList('Blacklist_UTF8.txt',token_word)
+tokenAfterBlacklist = myBlacklist.getBlacklist()
+
+wordCounter = WordCounter(tokenAfterBlacklist)
+dictionary = wordCounter.getWordCount()
+
+
+
+
+
+for sentence in token_sentences:
+	print sentence
+
+# for word in dictionary:
+# 	pair = word + ',' + str(dictionary[word])
+# 	#print pair
+
+# for tag in categoryList:		
+# 	for entry in tag.getCategoryItemList():
+# 		if entry in tokenAfterBlacklist:
+# 			print entry + " +++++++++ "
+# 	 	else:
+# 	 		print entry
+
+
 
 #root = Tk()
 #app = App(root)
 #root.mainloop()
-
-
-print ""
-#readDBTexte()
 
 
 
