@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Add word to Blacklist{% endblock %}
+
+{% block content %}
+	<h4>Add word to blacklist</h4>
+	<form action="/home/blacklist/" method="GET">
+		Word:<br><input name="blackword" type="text" size="50" maxlength="50">
+               	<input type="submit" value=" Add word to blacklist ">
+	</form>
+{% endblock %}

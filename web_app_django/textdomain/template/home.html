@@ -3,6 +3,7 @@
 {% block title %}Texts{% endblock %}
 
 {% block content %}
+	<h4>Texts</h4>
 	<form action="/home/" method="GET">
 		<select name="id" onChange="this.form.submit()">
 			<option></option>
@@ -26,6 +27,6 @@
 	{% endif %}
 
 	{% if word_name and word_count %}
-		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		<div id="container" style="min-width: 400px; height: 450px; margin: 0 auto"></div>
 	{% endif %}
 {% endblock %}

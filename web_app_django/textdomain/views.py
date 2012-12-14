@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.template import Context, loader
 from django.utils.safestring import mark_safe
 
-from textdomain.models import Domain, Text, Term, Word, TextHasWords
+from textdomain.models import Domain, Text, Term, Word, TextHasWords, Blacklist
 from textdomain.tokenize import Tokenizer, WordCount
 
 def home(request):
@@ -61,5 +61,35 @@ def home(request):
 
 	return HttpResponse(template.render(context))
 
-def detail(request, text_id):
-	return HttpResponse("Hello World "+text_id)
+def blacklist(request):
+	template = loader.get_template('blacklist.html')
+
+	context = Context({})
+
+	if request.method == 'GET':
+
+		print "there we are"
+
+		blacklistword = request.GET.get('blackword', '')
+		blacklistword = blacklistword.upper()
+		print blacklistword
+		try:
+			blackword = Blacklist.objects.get(name=blacklistword)
+		except Blacklist.DoesNotExist:
+			blackword = None
+
+		if blackword is None:
+			blacklist = Blacklist(name=blacklistword)
+			blacklist.save()
+			
+			try:
+                                word = Word.objects.get(name=blacklistword)
+				print word.name
+                        except Word.DoesNotExist:
+                                word = None
+
+                        if word is not None:
+				print word.name
+				word.delete()
+
+	return HttpResponse(template.render(context))
