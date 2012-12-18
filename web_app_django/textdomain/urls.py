@@ -5,7 +5,8 @@ from textdomain import views
 urlpatterns = patterns('',
     # ex: /polls/
     url(r'^$', views.home, name='home'),
-    url(r'^blacklist/$', views.blacklist, name='blacklist')
+    url(r'^blacklist/$', views.blacklist, name='blacklist'),
+    url(r'^sentence/$', views.sentence, name='sentence')
 
     # ex: /polls/5/
     #url(r'^(?P<text_id>\d+)/$', views.detail, name='detail'),

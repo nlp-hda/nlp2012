@@ -5,6 +5,7 @@ from django.utils.safestring import mark_safe
 from textdomain.models import Domain, Text, Term, Word, TextHasWords, Blacklist
 from textdomain.tokenize import Tokenizer, WordCount
 
+
 def home(request):
 	text_list = Text.objects.all()
 
@@ -60,6 +61,18 @@ def home(request):
 				context['word_range'] = wordrange
 
 	return HttpResponse(template.render(context))
+
+def sentence(request):
+	template = loader.get_template('sentence.html')
+	token=Tokenizer(12)
+	text_list = token.getSentenceToken()
+	context = Context({
+       		'text_list': text_list,
+	})
+
+	return HttpResponse(template.render(context)) 
+
+
 
 def blacklist(request):
 	template = loader.get_template('blacklist.html')

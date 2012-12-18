@@ -1,6 +1,7 @@
 from nltk.tokenize import word_tokenize,wordpunct_tokenize
 from nltk.tokenize import TreebankWordTokenizer
 from nltk.probability import FreqDist
+import nltk.data
 
 from textdomain.models import Blacklist, Text, Word, TextHasWords
 
@@ -61,3 +62,14 @@ class Tokenizer(object):
 			if texthasword is None:	
 				texthasword = TextHasWords(text=self.textobject, word=word,count=w.count)
 				texthasword.save()
+
+	def getSentenceToken(self):
+		sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
+		sent_list = '\n'.join(sent_detector.tokenize(self.text.strip(), realign_boundaries=True)).split('\n')
+		return sent_list
+
+
+
+
+
+

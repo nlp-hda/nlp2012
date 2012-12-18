@@ -67,7 +67,7 @@ class MyBlackList():
 		self.blacklist = inputfile_blacklist.read()	
 
 	def cleanToken(self):
-		m = re.compile(r'[0-9a-zA-Z]')
+		m = re.compile(r'[a-zA-Z]')
 		self.clean_token=[]
 		for t in self.token_word:
 			if m.match(t):

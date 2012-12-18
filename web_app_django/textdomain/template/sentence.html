@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Add word to Blacklist{% endblock %}
+
+{% block content %}
+	<h4>Sentence Token</h4>
+	{% for text in text_list %}
+			{{ text }}<br>
+	{% endfor %}
+{% endblock %}
