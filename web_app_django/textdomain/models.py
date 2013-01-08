@@ -8,6 +8,7 @@ class Term(models.Model):
 	def __unicode__(self):
         	return self.name
 
+
 class Word(models.Model):
 	name = models.CharField(max_length=100)
 
@@ -30,9 +31,9 @@ class TextHasWords(models.Model):
 
 class Domain(models.Model):
 	name = models.CharField(max_length=50)
-	terms = models.ManyToManyField(Term)
 	texts = models.ManyToManyField(Text)
-
+	terms = models.ManyToManyField(Term)
+	
 	def __unicode__(self):
         	return self.name
 	
