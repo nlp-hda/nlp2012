@@ -61,10 +61,27 @@ def home(request):
 				context['word_range'] = wordrange
 
 
-				itlist = ['SEARCH', 'GOOGLE']
-				medlist = ['INFORMATION']
+				domains = Domain.objects.all()
+				
+				for domain in domains:
+					terms = domain.terms.all()
+					if domain.name == 'IT':
+						itterms = terms
+					if domain.name == 'MEDICAL':
+						medterms = terms
+
+				itlist=[]
+				medlist=[]
+
+				for term in itterms:
+					itlist.append(term.name)
+				for term in medterms:
+					medlist.append(term.name)
+						
 				it_words = 0
 				med_words = 0
+
+				print itlist
 
 				for w in range(wordrange):
 					if wordcount[w].name in itlist:	
