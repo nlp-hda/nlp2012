@@ -13,7 +13,7 @@ import HTMLParser
 
 
 class MyHtmlParser(HTMLParser.HTMLParser):
-  """ Simple HTML parser that extracts text from the given data """
+	""" Simple HTML parser that extracts text from the given data """
 	
 	def __init__(self):
 		HTMLParser.HTMLParser.__init__(self) # must be like this, due to old class style of HTMLParser!
@@ -38,16 +38,30 @@ def readFromUrl(url):
 	return opener.open(url).read()
 
 
-def countWords(wordList):
-	""" Returns a dictionary with words as keys and integers as values, representing their occurence in the given text """
+def countWordFrequency(wordList):
+	""" Returns a lower case dictionary with words as keys and integers as values, representing their occurence in the given text """
 	words = dict()
-	for word in wordList:
+	for w in wordList:
+		word = w.lower() # convert to lower case
 		if words.has_key(word):
 			words[word] += 1
 		else:
 			words[word] = 1
 	return words
 
+
+__blacklist__ = ['after', 'about', 'between', 'but', 'only', 'been', 'both', 'did', "n't", "it's", "'s", 's', 'its', 'may', 'no', 'yes', 'not', 'have', 'has', 'all', 'also', 'so', 'other', 'from', 'can', 'it', 'an', 'into', 'by', 'with', 'had', 'such', 'be', 'on', 'are', 'my', 'new', 'at', 'that', 'for', 'as', 'or', 'in', 'is', 'he', 'she', 'and', 'to', 'of', 'a', 'his', 'how', 'the', 'do', 'much', 'most', 'could', 'now', 'ca', 'we', 'well', 'were', 'when', 'which', 'who', 'what', 'will', 'would', 'you', 'your', 'than', 'their', 'there', 'these', 'they', 'this', 'those', 'through', 'me', 'more', 'became', 'because', 'see', 'very', 'use', 'was', 'year', 'many', 'used', 'first']
+
+
+def filterCommonWords(words):
+	""" Filter common words - compare lower case! """
+	return filter(lambda w: w.lower() not in __blacklist__, words)
+
+
+def filterSmallWords(words):
+	""" Filter small (non-relevant) words """
+	return filter(lambda w: len(w) > 3, words)
+	
 
 def tokenizeIt(data):
 	""" Extracts words from the given input file handle's readline method """
@@ -57,11 +71,11 @@ def tokenizeIt(data):
 		if tokenType == 1:
 			words.append(token)
 
-	# Since content is read from a file handle, I stored the data in a tmp file!
+	# Since content must be read from a file handle (see tokenize module), the data is stored in a tmp file
 	f = tempfile.TemporaryFile(mode='w+r')	
 	f.write(data)
 
-	# Reset file position
+	# Reset file position for reading...
 	f.seek(0)
 
 	# IMPORTANT, otherwise: raise TokenError, ("EOF in multi-line statement", (lnum, 0))
@@ -81,9 +95,9 @@ def getTopWords(wordDict, n):
 		if wordDict[a] < wordDict[b]:
 			return -1
 		elif wordDict[a] > wordDict[b]:
-			return 0
-		else:
 			return 1
+		elif wordDict[a] == wordDict[b]:
+			return 0
 
 	return sorted(wordDict, cmp=compareCount, reverse=True)[:n]	
 
@@ -95,15 +109,54 @@ def main():
 		print 'USAGE: word_count.py <URL>'
 		sys.exit(0)
 
-	url = sys.argv[1]
+	urlsFile = sys.argv[1]
+	f = open(urlsFile, 'r')
+	urls = f.readlines()
+	f.close()
 
-	print 'Read ' + url + ' and parse HTML...'
-	parser = MyHtmlParser()
-	parser.feed(readFromUrl(url))
+	results = list()
 
-	# Convert from list-of-strings to string
-	print 'Tokenize...'
-	print getTopWords(countWords(tokenizeIt(''.join(parser.text))), 50)
+	maxTopWords = 30
+
+	for url in urls:
+
+		print 'Read ' + url + ' and parse HTML...'
+
+		parser = MyHtmlParser()
+
+		parser.feed(readFromUrl(url))
+
+		# Convert from list-of-strings to string
+		print 'Tokenize...'
+
+		tmp = countWordFrequency(filterCommonWords(filterSmallWords(tokenizeIt(''.join(parser.text)))))
+
+		results.extend(getTopWords(tmp, maxTopWords))
+
+		print getTopWords(tmp, 10)
+
+	#
+	#
+	# Dictionaries zusammen mergen und nicht in Liste speichern!!!
+	#
+	#
 
 
-main()
+	#print results
+
+	#print countWordFrequency(results)
+
+	print getTopWords(countWordFrequency(results), maxTopWords)
+
+	#uniqueResults = sorted(list(set(map(lambda w: w.lower(), results))))
+
+	#f = open('results.txt', 'w')
+	#f.write(' '.join(uniqueResults))
+	#f.close()
+	
+	#print uniqueResults
+
+
+# start script
+if __name__ == "__main__":
+    main()
