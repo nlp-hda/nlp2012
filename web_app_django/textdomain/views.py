@@ -60,6 +60,23 @@ def home(request):
 				context['word_count'] = wordcounted
 				context['word_range'] = wordrange
 
+
+				itlist = ['SEARCH', 'GOOGLE']
+				medlist = ['INFORMATION']
+				it_words = 0
+				med_words = 0
+
+				for w in range(wordrange):
+					if wordcount[w].name in itlist:	
+						it_words += 1
+					if wordcount[w].name in medlist:	
+						med_words += 1
+
+				context['it_words'] = it_words
+				context['med_words'] = med_words
+
+
+
 	return HttpResponse(template.render(context))
 
 def sentence(request):
