@@ -1,0 +1,5 @@
+GET /search?hl=en&q=%22colorless+greenish%22&num=50&btnG=Google+Search HTTP/1.1Accept-Encoding: identityHost: www.google.comAccept-Language: en-us,en;q=0.5Connection: closeAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.6) Gecko/2009011913 Firefox/3.0.6HTTP/1.1 302 FoundCache-Control: privateContent-Type: text/html; charset=UTF-8Location: http://www.google.com/sorry/?continue=http://www.google.com/search%3Fhl%3Den%26q%3D%2522colorless%2Bgreenish%2522%26num%3D50%26btnG%3DGoogle%2BSearchContent-Length: 346Date: Mon, 07 Jan 2013 13:51:33 GMTServer: GFE/2.0Connection: close<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>302 Moved</TITLE></HEAD><BODY>
+<H1>302 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/sorry/?continue=http://www.google.com/search%3Fhl%3Den%26q%3D%2522colorless%2Bgreenish%2522%26num%3D50%26btnG%3DGoogle%2BSearch">here</A>.</BODY></HTML>

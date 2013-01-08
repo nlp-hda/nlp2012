@@ -1,0 +1,4 @@
+- Google API statt xgoogle
+-> sonst: Proxy-Liste
+- Regex überprüfen/robuster
+- ngramViewer miteinbeziehen --> Synonym-Filter --> weniger Noise
