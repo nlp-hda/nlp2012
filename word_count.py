@@ -130,13 +130,15 @@ def readUrls(urlsFile):
 def main():
 	""" Start program with configuration """
 
-	if len(sys.argv) < 2:
-		print 'USAGE: word_count.py <URL>'
+	if len(sys.argv) < 3:
+		print 'USAGE: word_count.py <url-file> <max-words>'
 		sys.exit(0)
 
-	maxTopWords = 30
-
 	urls = readUrls(sys.argv[1])
+
+	maxTopWords = int(sys.argv[2])
+
+	assert maxTopWords > 0
 
 	def collectWordFrequenciesFromUrls(): # Closure
 
@@ -159,7 +161,9 @@ def main():
 
 		return wordFrequencies
 
-	print getTopWords(collectWordFrequenciesFromUrls(), maxTopWords)
+	results = getTopWords(collectWordFrequenciesFromUrls(), maxTopWords) 
+
+	print '=> Top', len(results), 'words:', results
 
 
 # start script
