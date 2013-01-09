@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<script src="/media/jquery.js"></script>
-	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="/media/highcharts.js"></script> <!-- No need of internet now for using HighCharts Library (Bug Resolved by MSH)-->
+	<!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
 	<title>{% block title %}My amazing site{% endblock %}</title>
 
 	{% if word_name and word_count %}	
@@ -80,7 +81,7 @@
 <body>
 	<div id="sidebar">
 		{% block sidebar %}
-			<a href="/admin/" target="_blank">Admin</a> | <a href="/home/">Home</a> | <a href="/home/blacklist/">Add word to Blacklist</a> | <a href="/home/sentence/">Sentence</a>
+			<a href="/admin/" target="_blank">Admin</a> | <a href="/home/">Home</a> | <a href="/home/blacklist/">Add Word To Blacklist</a> | <a href="/home/sentence/">Sentence</a>
 		{% endblock %}
 	</div>
 

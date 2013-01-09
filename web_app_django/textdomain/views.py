@@ -89,8 +89,8 @@ def home(request):
 					if wordcount[w].name in medlist:	
 						med_words += 1
 
-				context['it_words'] = it_words
-				context['med_words'] = med_words
+			context['it_words'] = it_words
+			context['med_words'] = med_words
 
 
 
