@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+""" Author: Tobias Daub """
+
 import sys
 import copy
 import urllib2
@@ -8,12 +10,12 @@ import tempfile
 import tokenize
 import HTMLParser
 
-# Sample URLs with text
+# Sample URLs with ASCII text - at the moment there's a problem when parsing non-ASCII content
 'http://archive.org/stream/Dissertation.Der_Mensch_und_die_KI/Mensch_und_KI_djvu.txt'
 'http://archive.org/stream/illinoisappellat2120illi/illinoisappellat2120illi_djvu.txt'
 
 #
-# Verbs, adjectives and adverbs lists were taken from http://www.linguanaut.com/verbs.htm
+# NOTE: Verbs, adjectives and adverbs lists were taken from http://www.linguanaut.com/verbs.htm
 #
 
 class MyHtmlParser(HTMLParser.HTMLParser):
@@ -117,6 +119,14 @@ def mergeWordCountDictionaries(a, b):
 	return aCopy
 
 
+def readUrls(urlsFile):
+	""" Reads the URL file and does some error checking... """
+	f = open(urlsFile, 'r')
+	urls = map(lambda url: url.replace('\n', ''), filter(lambda line: (line != '') and (line.find('http://') != -1), f.readlines()))
+	f.close()
+	return urls
+
+
 def main():
 	""" Start program with configuration """
 
@@ -124,33 +134,32 @@ def main():
 		print 'USAGE: word_count.py <URL>'
 		sys.exit(0)
 
-	urlsFile = sys.argv[1]
-	f = open(urlsFile, 'r')
-	urls = f.readlines()
-	f.close()
-
-	#results = list()
-
 	maxTopWords = 30
 
-	results = dict()
+	urls = readUrls(sys.argv[1])
 
-	for url in urls:
+	def collectWordFrequenciesFromUrls(): # Closure
 
-		print 'Read ' + url + ' and parse HTML...'
+		wordFrequencies = dict()
 
-		parser = MyHtmlParser()
+		for i in range(len(urls)):
 
-		parser.feed(readFromUrl(url))
+			url = urls[i]
 
-		# Convert from list-of-strings to string
-		print 'Tokenize...'
+			print i+1, 'Read', url, 'and collect words...'
 
-		tmp = countWordFrequency(filterCommonWords(filterSmallWords(tokenizeIt(''.join(parser.text)))))
+			# Because the parser holds a state, initialize a new parser for each URL
+			parser = MyHtmlParser()
 
-		results = mergeWordCountDictionaries(results, tmp)
+			parser.feed(readFromUrl(url))
 
-	print getTopWords(results, maxTopWords)
+			curWordFrequencies = countWordFrequency(filterCommonWords(filterSmallWords(tokenizeIt(''.join(parser.text)))))
+
+			wordFrequencies = mergeWordCountDictionaries(wordFrequencies, curWordFrequencies)
+
+		return wordFrequencies
+
+	print getTopWords(collectWordFrequenciesFromUrls(), maxTopWords)
 
 
 # start script
