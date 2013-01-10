@@ -56,7 +56,7 @@ class Tokenizer(object):
 				word.save()
 			try:
 				texthasword = TextHasWords.objects.get(text=self.textobject, word=word)
-				print texthasword
+
 			except TextHasWords.DoesNotExist:
 				texthasword = None
 

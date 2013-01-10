@@ -60,37 +60,26 @@ def home(request):
 				context['word_count'] = wordcounted
 				context['word_range'] = wordrange
 
-
 				domains = Domain.objects.all()
+
+				counted = []
 				
 				for domain in domains:
 					terms = domain.terms.all()
-					if domain.name == 'IT':
-						itterms = terms
-					if domain.name == 'MEDICAL':
-						medterms = terms
+					termlist=[]
+	
+					counter = 0
 
-				itlist=[]
-				medlist=[]
+					for term in terms:
+						termlist.append(term.name)
+					
+					for w in range(wordrange):
+						if wordcount[w].name in termlist:	
+							counter += 1
 
-				for term in itterms:
-					itlist.append(term.name)
-				for term in medterms:
-					medlist.append(term.name)
-						
-				it_words = 0
-				med_words = 0
+					counted.append(WordCount(domain.name,counter))
 
-				for w in range(wordrange):
-					if wordcount[w].name in itlist:	
-						it_words += 1
-					if wordcount[w].name in medlist:	
-						med_words += 1
-
-			context['it_words'] = it_words
-			context['med_words'] = med_words
-
-
+				context['domains'] = counted
 
 	return HttpResponse(template.render(context))
 
