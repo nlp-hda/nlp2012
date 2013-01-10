@@ -13,10 +13,13 @@
 		</select>
 	</form>
 
-	
-		<h4> IT: {{ it_words }} Words <br />
-			 Medical: {{ med_words }} Words </h4>
-	
+		{% if it_words %}	
+			<h4> IT: {{ it_words }} Words </h4>
+		{% endif %}
+
+		{% if med_words %}
+			<h4>Medical: {{ med_words }} Words </h4>
+		{% endif %}
 
 	{% if text_object %}
 		<h4> {{ text_object.name }}</h4>

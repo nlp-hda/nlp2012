@@ -32,6 +32,7 @@ class Tokenizer(object):
 				black.append(b.name)
 	
 		self.textobject.count = len(token_word)
+		self.textobject.words.clear()
 		self.textobject.save()
 	
 		for t in token_word:
@@ -53,9 +54,9 @@ class Tokenizer(object):
 			if word is None:
 				word = Word(name=w.name)
 				word.save()
-
 			try:
 				texthasword = TextHasWords.objects.get(text=self.textobject, word=word)
+				print texthasword
 			except TextHasWords.DoesNotExist:
 				texthasword = None
 

@@ -23,16 +23,16 @@ def home(request):
 		if id:
 			text = Text.objects.get(id=id)
 
+
+			context['analyse'] = 1
 			context['text_object'] = text;			
 			
-			if analyse and len(text.words.all()) == 0:
+			if analyse:
 				token=Tokenizer(text.id)
 				token.analyzeWords()
 
-			if len(text.words.all()) == 0:
-				context['analyse'] = 1
-	
-			else:
+			if len(text.words.all()) > 0:
+
 				words = text.words.all()
 				wordcount = []
 				
@@ -80,8 +80,6 @@ def home(request):
 						
 				it_words = 0
 				med_words = 0
-
-				print itlist
 
 				for w in range(wordrange):
 					if wordcount[w].name in itlist:	
