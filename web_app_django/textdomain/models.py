@@ -27,8 +27,9 @@ class Text(models.Model):
 class TextHasWords(models.Model):
 	text = models.ForeignKey(Text)
 	word = models.ForeignKey(Word)
-	count = models.IntegerField()	
+	count = models.IntegerField()
 
+	
 class Domain(models.Model):
 	name = models.CharField(max_length=50)
 	texts = models.ManyToManyField(Text)

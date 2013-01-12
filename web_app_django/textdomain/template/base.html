@@ -76,6 +76,67 @@
 		})(jQuery);
 	</script>
 	{% endif %}
+	
+	{% if IT and MEDICAL and blacklist_count %}
+	<script type="text/javascript">
+	<!-- Pie Charts work done here -->
+	$(function () {
+    var chart;
+    
+    $(document).ready(function () {
+    	
+			// Build the chart
+			chart = new Highcharts.Chart({
+				chart: {
+					renderTo: 'pie_charts_container',
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false
+				},
+				title: {
+					text: ''
+				},
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+					percentageDecimals: 1
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: false
+						},
+						showInLegend: true
+					}
+				},
+				series: [{
+					type: 'pie',
+					name: 'Domain Share',
+					data: [
+						{
+							name: 'IT',
+							y: {{ IT }},
+							sliced: true
+						},
+						{
+							name: 'MEDICAL',
+							y: {{MEDICAL}},
+							sliced: true
+						},
+						{
+							name: 'GENERAL / OTHER',
+							y: {{ general_domain }},
+							sliced: true
+						}
+					]
+				}]
+			});
+		});
+    
+	});
+	</script>
+	{% endif %}	
 </head>
 
 <body>
