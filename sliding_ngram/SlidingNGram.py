@@ -13,10 +13,6 @@ class SlidingNGram(object):
     representing a text by sliding n-grams
     '''
 
-    text = "colorless green ideas sleep furiously"
-    ngramSize = 2
-    slidingNGrams = []
-
     def __init__(self,text,size):
         '''
         Constructor: split text into n-grams by n-gram size
@@ -27,6 +23,7 @@ class SlidingNGram(object):
         words = self.text.split()
         logging.debug(self.text)
         
+        self.slidingNGrams = []
         for i in range(len(words) - self.ngramSize + 1) :
             ngram = words[i: i + self.ngramSize]
             self.slidingNGrams.append(ngram)

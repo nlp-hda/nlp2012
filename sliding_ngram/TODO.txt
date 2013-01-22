@@ -1,6 +1,7 @@
 - Google API statt xgoogle => refused: Google API has a call amount restriction too
--> else: Proxy-Liste
 
-- After NGramViewer and Synonyms "pages found" -> on each ngram: get Top 3 synonym ngrams together with given ngram -> search for Trigrams including given or substituted >priori< token >and< >posterori< token (so, each 2 Trigrams)
--> use the pages found again to reject bad alternatives (in terms of more context knowledge)
--> remaining ngrams are scored and passed to further modules
+- Result reduciton: 5% threshold on scores
+- Using trigrams for augmented scoring
+- Find synonyms by word stem
+
+- using knowledge about part of speech types, related words and usages, maybe the user wanted to use a metaphore?

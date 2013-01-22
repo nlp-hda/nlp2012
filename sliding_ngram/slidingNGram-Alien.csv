@@ -1,0 +1,201 @@
+a large heart for
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+a large;a large;0,000092679848118;719000000.0;;0;a large heart;4340000;35700000.0;310000000.0;
+a large;a big;0,000033155881586;784000000.0;;0;a big heart;81800000;9630000.0;225000000.0;
+
+Given a phrase, which is in general more likely?
+syn ngram;score
+a large;719000000.0
+a big;784000000.0
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);a large;a big;
+information technology;0.103268730113;0.0410433448408;
+medical;0.896731269887;0.958956655159;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+a large;0.772717502624;0.558215833104;
+a big;0.227282497376;0.441784166896;
+
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+large heart;large heart;0,000000060644057;1040000.0;a large heart;4340000;large heart for;2590000;24100.0;3180000.0;
+large heart;large bosom;0,000000009394634;90600.0;a large bosom;1590000;large bosom for;17400;906.0;32100.0;
+large heart;large pump;0,000000008091697;172000.0;a large pump;641000;large pump for;1040000;7100.0;101000.0;
+large heart;large ticker;0,000000000000000;
+large heart;large mettle;0,000000000000000;
+large heart;big heart;0,000000146676774;7510000.0;a big heart;81800000;big heart for;4680000;689000.0;828000.0;
+large heart;big bosom;0,000000004357030;198000.0;a big bosom;5440000;big bosom for;74500;1590.0;68800.0;
+large heart;big pump;0,000000004691250;199000.0;a big pump;600000;big pump for;854000;4450.0;92000.0;
+large heart;big ticker;0,000000000000000;
+large heart;big mettle;0,000000000000000;
+large heart;bombastic heart;0,000000000000000;
+large heart;bombastic bosom;0,000000000000000;
+large heart;bombastic pump;0,000000000000000;
+large heart;bombastic ticker;0,000000000000000;
+large heart;bombastic mettle;0,000000000000000;
+large heart;declamatory heart;0,000000000000000;
+large heart;declamatory bosom;0,000000000000000;
+large heart;declamatory pump;0,000000000000000;
+large heart;declamatory ticker;0,000000000000000;
+large heart;declamatory mettle;0,000000000000000;
+large heart;orotund heart;0,000000000000000;
+large heart;orotund bosom;0,000000000000000;
+large heart;orotund pump;0,000000000000000;
+large heart;orotund ticker;0,000000000000000;
+large heart;orotund mettle;0,000000000000000;
+
+Given a phrase, which is in general more likely?
+syn ngram;score
+large heart;1040000.0
+large bosom;90600.0
+large pump;172000.0
+big heart;7510000.0
+big bosom;198000.0
+big pump;199000.0
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);large heart;large bosom;large pump;big heart;big bosom;big pump;
+information technology;0.00752161293343;0.0274495546264;0.0656799259944;0.45418589321;0.0225884358574;0.0461378952825;
+medical;0.992478387067;0.972550445374;0.934320074006;0.54581410679;0.977411564143;0.953862104717;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+large heart;0.00481818608859;0.345302444754;
+large bosom;1.57793672048e-05;0.000303649397672;
+large pump;0.000234757774154;0.00181379840054;
+big heart;0.994700523258;0.649246276659;
+big bosom;6.05195237955e-05;0.00142230528043;
+big pump;0.000170233988619;0.00191152550755;
+
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+heart for;heart for;0,000001192986095;18400000.0;large heart for;2590000;;0;2780000.0;3690000.0;
+heart for;bosom for;0,000000033915962;202000.0;large bosom for;17400;;0;1660.0;75500.0;
+heart for;pump for;0,000000152541465;13200000.0;large pump for;1040000;;0;3540000.0;1880000.0;
+
+Given a phrase, which is in general more likely?
+syn ngram;score
+heart for;18400000.0
+bosom for;202000.0
+pump for;13200000.0
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);heart for;bosom for;pump for;
+information technology;0.429675425039;0.0215137376879;0.653136531365;
+medical;0.570324574961;0.978486262312;0.346863468635;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+heart for;0.522597310612;0.732211936273;
+bosom for;3.42581580768e-06;0.000164471607165;
+pump for;0.477399263573;0.26762359212;
+
+a big heart We
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+a big;a big;0,000033155881586;784000000.0;;0;a big heart;81800000;9630000.0;225000000.0;
+a big;a large;0,000092679848118;719000000.0;;0;a large heart;4340000;35700000.0;310000000.0;
+a big;a bad;0,000016342193097;309000000.0;;0;a bad heart;3660000;2920000.0;80600000.0;
+a big;a prominent;0,000005570969506;40400000.0;;0;a prominent heart;255000;2940000.0;19300000.0;
+a big;a heavy;0,000010263775342;77800000.0;;0;a heavy heart;31500000;2120000.0;25900000.0;
+
+Given a phrase, which is in general more likely?
+syn ngram;score
+a big;784000000.0
+a large;719000000.0
+a bad;309000000.0
+a prominent;40400000.0
+a heavy;77800000.0
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);a big;a large;a bad;a prominent;a heavy;
+information technology;0.0410433448408;0.103268730113;0.0349616858238;0.132194244604;0.0756602426838;
+medical;0.958956655159;0.896731269887;0.965038314176;0.867805755396;0.924339757316;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+a big;0.219447549038;0.41312429369;
+a large;0.746080160185;0.522002686057;
+a bad;0.0262258586245;0.0583278105672;
+a prominent;0.00345236798332;0.00182608432129;
+a heavy;0.00479406416865;0.00471912536435;
+
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+big heart;big heart;0,000000146676774;7510000.0;a big heart;81800000;big heart We;571000;690000.0;818000.0;
+big heart;big bosom;0,000000004357030;195000.0;a big bosom;5440000;big bosom We;27;1590.0;69000.0;
+big heart;big pump;0,000000004691250;199000.0;a big pump;600000;big pump We;49;4450.0;92000.0;
+big heart;big ticker;0,000000000000000;
+big heart;big mettle;0,000000000000000;
+big heart;large heart;0,000000060644057;1040000.0;a large heart;4340000;large heart We;318000;4080.0;3180000.0;
+big heart;large bosom;0,000000009394634;90600.0;a large bosom;1590000;large bosom We;40;906.0;32100.0;
+big heart;large pump;0,000000008091697;172000.0;a large pump;641000;large pump We;0;7100.0;24900.0;
+big heart;large ticker;0,000000000000000;
+big heart;large mettle;0,000000000000000;
+big heart;bad heart;0,000000083114575;644000.0;a bad heart;3660000;bad heart We;257000;17400.0;760000.0;
+big heart;bad bosom;0,000000000000000;
+big heart;bad pump;0,000000000743764;123000.0;a bad pump;861000;bad pump We;0;618.0;18100.0;
+big heart;bad ticker;0,000000000000000;
+big heart;bad mettle;0,000000000000000;
+big heart;prominent heart;0,000000001963087;13900.0;a prominent heart;255000;prominent heart We;0;1680.0;21300.0;
+big heart;prominent bosom;0,000000002860402;6480.0;a prominent bosom;12900;prominent bosom We;0;0.0;986.0;
+big heart;prominent pump;0,000000000000000;
+big heart;prominent ticker;0,000000000000000;
+big heart;prominent mettle;0,000000000000000;
+big heart;heavy heart;0,000000384671632;2900000.0;a heavy heart;31500000;heavy heart We;791000;121000.0;373000.0;
+big heart;heavy bosom;0,000000002575642;10500.0;a heavy bosom;80800;heavy bosom We;0;0.0;2940.0;
+big heart;heavy pump;0,000000000739835;95300.0;a heavy pump;412000;heavy pump We;0;4400.0;66900.0;
+big heart;heavy ticker;0,000000000000000;
+big heart;heavy mettle;0,000000000000000;
+
+Given a phrase, which is in general more likely?
+syn ngram;score
+big heart;7510000.0
+big bosom;195000.0
+big pump;199000.0
+large heart;1040000.0
+large bosom;90600.0
+large pump;172000.0
+bad heart;644000.0
+bad pump;123000.0
+prominent heart;13900.0
+prominent bosom;6480.0
+heavy heart;2900000.0
+heavy bosom;10500.0
+heavy pump;95300.0
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);big heart;big bosom;big pump;large heart;large bosom;large pump;bad heart;bad pump;prominent heart;prominent bosom;heavy heart;heavy bosom;heavy pump;
+information technology;0.457559681698;0.0225244368891;0.0461378952825;0.00128137483983;0.0274495546264;0.221875;0.0223822999743;0.0330163479004;0.0731070496084;0.0;0.244939271255;0.0;0.0617110799439;
+medical;0.542440318302;0.977475563111;0.953862104717;0.99871862516;0.972550445374;0.778125;0.977617700026;0.9669836521;0.926892950392;1.0;0.755060728745;1.0;0.938288920056;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+big heart;0.933462683105;0.554969091494;
+big bosom;5.58521208238e-05;0.00121551201919;
+big pump;0.000159522159637;0.00165392746543;
+large heart;0.000764366131526;0.298769331094;
+large bosom;1.47864639408e-05;0.000262729467479;
+large pump;0.000219985840832;0.000386904115629;
+bad heart;0.00201856644123;0.044215548322;
+bad pump;1.36930917991e-05;0.0002011218438;
+prominent heart;4.2066077261e-06;2.67466847657e-05;
+prominent bosom;0.0;5.77201533555e-07;
+heavy heart;0.0632108021192;0.0977197585402;
+heavy bosom;0.0;2.78876670624e-06;
+heavy pump;7.55359177676e-05;0.000575962985076;
+
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+heart We;heart We;0,000000012412321;4190000.0;big heart We;571000;;0;369000.0;3870000.0;
+
+Given a phrase, which is in general more likely?
+syn ngram;score
+heart We;4190000.0
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);heart We;
+information technology;0.0870488322718;
+medical;0.912951167728;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+heart We;1.0;1.0;
+

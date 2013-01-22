@@ -1,0 +1,98 @@
+his large heart unique
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+his large;his large;0,000001327285910;5710000.0;;0;his large heart;775000;1180000.0;1910000.0;
+his large;his big;0,000001949942392;33500000.0;;0;his big heart;1730000;5910000.0;7550000.0;
+his large;his orotund;0,000000000978080;
+Given a phrase, which is in general more likely?
+syn ngram;general
+his large;0,145626115787
+his big;0,854373884213
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);his large;his big;
+information technology;0,381877022654;0,439078751857;
+medical;0,618122977346;0,560921248143;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+his large;0,032911820276;0,0413374314097;
+his big;0,967088179724;0,95866256859;
+
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+large heart;large heart;0,000000060644057;1040000.0;his large heart;775000;large heart unique;0;24100.0;3180000.0;
+large heart;large ticker;0,000000000000000;
+large heart;large mettle;0,000000000000000;
+large heart;big heart;0,000000146676774;7510000.0;his big heart;1730000;big heart unique;30;689000.0;826000.0;
+large heart;big pump;0,000000004691250;199000.0;his big pump;364000;big pump unique;0;4450.0;92000.0;
+large heart;big ticker;0,000000000000000;
+large heart;big mettle;0,000000000000000;
+large heart;bombastic heart;0,000000000000000;
+large heart;bombastic bosom;0,000000000000000;
+large heart;bombastic pump;0,000000000000000;
+large heart;bombastic ticker;0,000000000000000;
+large heart;bombastic mettle;0,000000000000000;
+large heart;declamatory heart;0,000000000000000;
+large heart;declamatory bosom;0,000000000000000;
+large heart;declamatory pump;0,000000000000000;
+large heart;declamatory ticker;0,000000000000000;
+large heart;declamatory mettle;0,000000000000000;
+large heart;orotund heart;0,000000000000000;
+large heart;orotund bosom;0,000000000000000;
+large heart;orotund pump;0,000000000000000;
+large heart;orotund ticker;0,000000000000000;
+large heart;orotund mettle;0,000000000000000;
+large heart;orotund mettle;0,000000000000000;
+
+Given a phrase, which is in general more likely?
+syn ngram;general
+large heart;0,118870728083
+big heart;0,858383815293
+big pump;0,0227454566236
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);large heart;big heart;big pump;
+information technology;0,00752161293343;0,454785478548;0,0461378952825;
+medical;0,992478387067;0,545214521452;0,953862104717;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+large heart;0,00481968528382;0,347075298716;
+big heart;0,995010027759;0,65100336161;
+big pump;0,000170286957512;0,00192133967371;
+
+ngram;syn;ngramScore;result count;prioriTrigram;priori count;posterioriTrigram;posteriori count;augScoreIT;augScoreMed
+heart unique;heart unique;0,000000000000000;
+heart unique;heart unequaled;0,000000000000000;
+heart unique;heart unequalled;0,000000000000000;
+heart unique;heart unparalleled;0,000000000000000;
+heart unique;bosom unique;0,000000000000000;
+heart unique;bosom unequaled;0,000000000000000;
+heart unique;bosom unequalled;0,000000000000000;
+heart unique;bosom unparalleled;0,000000000000000;
+heart unique;pump unique;0,000000000000000;
+heart unique;pump unequaled;0,000000000000000;
+heart unique;pump unequalled;0,000000000000000;
+heart unique;pump unparalleled;0,000000000000000;
+heart unique;ticker unique;0,000000000000000;
+heart unique;ticker alone;0,000000000000000;
+heart unique;ticker unequaled;0,000000000000000;
+heart unique;ticker unequalled;0,000000000000000;
+heart unique;ticker unparalleled;0,000000000000000;
+heart unique;mettle unique;0,000000000000000;
+heart unique;mettle alone;0,000000000000000;
+heart unique;mettle unequaled;0,000000000000000;
+heart unique;mettle unequalled;0,000000000000000;
+heart unique;mettle unparalleled;0,000000000000000;
+heart unique;mettle unparalleled;0,000000000000000;
+
+Given a phrase, which is in general more likely?
+syn ngram;general
+
+Given a phrase, which domain is more likely?
+domain/phrase (given);
+information technology;
+medical;
+
+Given a domain, which phrase is more likely?
+phrase/domain (given);information technology;medical;
+

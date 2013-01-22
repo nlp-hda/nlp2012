@@ -1,0 +1,430 @@
+INFO:[('a', 'large'), ('a', 'big'), ('a', 'bombastic'), ('a', 'declamatory'), ('a', 'orotund')]
+INFO:ngram result on (a large,a big,a bombastic,a declamatory,a orotund): , 9.267984811837475e-05, 3.3155881586329393e-05, 2.5733084108026105e-08, 1.9178792035982422e-08, 0.0]
+INFO:5 <-> 5
+INFO:a large
+INFO:http://www.google.com/search?hl=en&q=%22a+large+heart%22&num=50&btnG=Google+Search
+INFO:score (a large heart): 4,340,000
+INFO:http://www.google.com/search?hl=en&q=%22a+large%22&num=50&btnG=Google+Search
+INFO:score ("a large"): 719,000,000
+INFO:denominator ("a large"): 719000000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+large%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a large" "information technology"): 35,700,000
+INFO:http://www.google.com/search?hl=en&q=%22a+large%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a large" "medical"): 310,000,000
+INFO:[719000000.0, 35700000.0, 310000000.0]
+INFO:a big
+INFO:http://www.google.com/search?hl=en&q=%22a+big+heart%22&num=50&btnG=Google+Search
+INFO:score (a big heart): 81,800,000
+INFO:http://www.google.com/search?hl=en&q=%22a+big%22&num=50&btnG=Google+Search
+INFO:score ("a big"): 784,000,000
+INFO:denominator ("a big"): 784000000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+big%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a big" "information technology"): 9,630,000
+INFO:http://www.google.com/search?hl=en&q=%22a+big%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a big" "medical"): 225,000,000
+INFO:[784000000.0, 9630000.0, 225000000.0]
+INFO:a bombastic
+INFO:http://www.google.com/search?hl=en&q=%22a+bombastic+heart%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? (a bombastic heart)
+INFO:[('large', 'heart'), ('large', 'bosom'), ('large', 'pump'), ('large', 'ticker'), ('large', 'mettle'), ('big', 'heart'), ('big', 'bosom'), ('big', 'pump'), ('big', 'ticker'), ('big', 'mettle'), ('bombastic', 'heart'), ('bombastic', 'bosom'), ('bombastic', 'pump'), ('bombastic', 'ticker'), ('bombastic', 'mettle'), ('declamatory', 'heart'), ('declamatory', 'bosom'), ('declamatory', 'pump'), ('declamatory', 'ticker'), ('declamatory', 'mettle'), ('orotund', 'heart'), ('orotund', 'bosom'), ('orotund', 'pump'), ('orotund', 'ticker'), ('orotund', 'mettle')]
+INFO:ngram result on (large heart,large bosom,large pump,large ticker,large mettle,big heart,big bosom,big pump,big ticker,big mettle,bombastic heart,bombastic bosom): , 6.0644056887326769e-08, 9.3946337376138445e-09, 8.0916966460620188e-09, 0.0, 0.0, 1.4667677442995833e-07, 4.3570301440828034e-09, 4.6912499070591212e-09, 0.0, 0.0, 0.0, 0.0]
+INFO:ngram result on (bombastic pump,bombastic ticker,bombastic mettle,declamatory heart,declamatory bosom,declamatory pump,declamatory ticker,declamatory mettle,orotund heart): , 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+INFO:ngram result on (orotund bosom,orotund pump,orotund ticker,orotund mettle): , 0.0, 0.0, 0.0, 0.0]
+INFO:25 <-> 25
+INFO:large heart
+INFO:http://www.google.com/search?hl=en&q=%22a+large+heart%22&num=50&btnG=Google+Search
+INFO:score (a large heart): 4,340,000
+INFO:http://www.google.com/search?hl=en&q=%22large+heart+for%22&num=50&btnG=Google+Search
+INFO:score (large heart for): 2,590,000
+INFO:http://www.google.com/search?hl=en&q=%22large+heart%22&num=50&btnG=Google+Search
+INFO:score ("large heart"): 1,040,000
+INFO:denominator ("large heart"): 1040000.0
+INFO:http://www.google.com/search?hl=en&q=%22large+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("large heart" "information technology"): 24,100
+INFO:http://www.google.com/search?hl=en&q=%22large+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("large heart" "medical"): 3,180,000
+INFO:[1040000.0, 24100.0, 3180000.0]
+INFO:large bosom
+INFO:http://www.google.com/search?hl=en&q=%22a+large+bosom%22&num=50&btnG=Google+Search
+INFO:score (a large bosom): 1,590,000
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom+for%22&num=50&btnG=Google+Search
+INFO:score (large bosom for): 17,400
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom%22&num=50&btnG=Google+Search
+INFO:score ("large bosom"): 90,600
+INFO:denominator ("large bosom"): 90600.0
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("large bosom" "information technology"): 906
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("large bosom" "medical"): 32,100
+INFO:[90600.0, 906.0, 32100.0]
+INFO:large pump
+INFO:http://www.google.com/search?hl=en&q=%22a+large+pump%22&num=50&btnG=Google+Search
+INFO:score (a large pump): 641,000
+INFO:http://www.google.com/search?hl=en&q=%22large+pump+for%22&num=50&btnG=Google+Search
+INFO:score (large pump for): 1,040,000
+INFO:http://www.google.com/search?hl=en&q=%22large+pump%22&num=50&btnG=Google+Search
+INFO:score ("large pump"): 172,000
+INFO:denominator ("large pump"): 172000.0
+INFO:http://www.google.com/search?hl=en&q=%22large+pump%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("large pump" "information technology"): 7,100
+INFO:http://www.google.com/search?hl=en&q=%22large+pump%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("large pump" "medical"): 101,000
+INFO:[172000.0, 7100.0, 101000.0]
+INFO:large ticker
+INFO:large mettle
+INFO:big heart
+INFO:http://www.google.com/search?hl=en&q=%22a+big+heart%22&num=50&btnG=Google+Search
+INFO:score (a big heart): 81,800,000
+INFO:http://www.google.com/search?hl=en&q=%22big+heart+for%22&num=50&btnG=Google+Search
+INFO:score (big heart for): 4,680,000
+INFO:http://www.google.com/search?hl=en&q=%22big+heart%22&num=50&btnG=Google+Search
+INFO:score ("big heart"): 7,510,000
+INFO:denominator ("big heart"): 7510000.0
+INFO:http://www.google.com/search?hl=en&q=%22big+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("big heart" "information technology"): 689,000
+INFO:http://www.google.com/search?hl=en&q=%22big+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("big heart" "medical"): 828,000
+INFO:[7510000.0, 689000.0, 828000.0]
+INFO:big bosom
+INFO:http://www.google.com/search?hl=en&q=%22a+big+bosom%22&num=50&btnG=Google+Search
+INFO:score (a big bosom): 5,440,000
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom+for%22&num=50&btnG=Google+Search
+INFO:score (big bosom for): 74,500
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom%22&num=50&btnG=Google+Search
+INFO:score ("big bosom"): 198,000
+INFO:denominator ("big bosom"): 198000.0
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("big bosom" "information technology"): 1,590
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("big bosom" "medical"): 68,800
+INFO:[198000.0, 1590.0, 68800.0]
+INFO:big pump
+INFO:http://www.google.com/search?hl=en&q=%22a+big+pump%22&num=50&btnG=Google+Search
+INFO:score (a big pump): 600,000
+INFO:http://www.google.com/search?hl=en&q=%22big+pump+for%22&num=50&btnG=Google+Search
+INFO:score (big pump for): 854,000
+INFO:http://www.google.com/search?hl=en&q=%22big+pump%22&num=50&btnG=Google+Search
+INFO:score ("big pump"): 199,000
+INFO:denominator ("big pump"): 199000.0
+INFO:http://www.google.com/search?hl=en&q=%22big+pump%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("big pump" "information technology"): 4,450
+INFO:http://www.google.com/search?hl=en&q=%22big+pump%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("big pump" "medical"): 92,000
+INFO:[199000.0, 4450.0, 92000.0]
+INFO:big ticker
+INFO:big mettle
+INFO:bombastic heart
+INFO:bombastic bosom
+INFO:bombastic pump
+INFO:bombastic ticker
+INFO:bombastic mettle
+INFO:declamatory heart
+INFO:declamatory bosom
+INFO:declamatory pump
+INFO:declamatory ticker
+INFO:declamatory mettle
+INFO:orotund heart
+INFO:orotund bosom
+INFO:orotund pump
+INFO:orotund ticker
+INFO:orotund mettle
+INFO:[('heart', 'for'), ('bosom', 'for'), ('pump', 'for'), ('ticker', 'for'), ('mettle', 'for')]
+INFO:ngram result on (heart for,bosom for,pump for,ticker for,mettle for): , 1.1929860950961786e-06, 3.3915961594743749e-08, 1.5254146508899188e-07, 3.8017065421650882e-09, 4.5400220249902645e-09]
+INFO:5 <-> 5
+INFO:heart for
+INFO:http://www.google.com/search?hl=en&q=%22large+heart+for%22&num=50&btnG=Google+Search
+INFO:score (large heart for): 2,590,000
+INFO:http://www.google.com/search?hl=en&q=%22heart+for%22&num=50&btnG=Google+Search
+INFO:score ("heart for"): 18,400,000
+INFO:denominator ("heart for"): 18400000.0
+INFO:http://www.google.com/search?hl=en&q=%22heart+for%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("heart for" "information technology"): 2,780,000
+INFO:http://www.google.com/search?hl=en&q=%22heart+for%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("heart for" "medical"): 3,690,000
+INFO:[18400000.0, 2780000.0, 3690000.0]
+INFO:bosom for
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom+for%22&num=50&btnG=Google+Search
+INFO:score (large bosom for): 17,400
+INFO:http://www.google.com/search?hl=en&q=%22bosom+for%22&num=50&btnG=Google+Search
+INFO:score ("bosom for"): 202,000
+INFO:denominator ("bosom for"): 202000.0
+INFO:http://www.google.com/search?hl=en&q=%22bosom+for%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("bosom for" "information technology"): 1,660
+INFO:http://www.google.com/search?hl=en&q=%22bosom+for%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("bosom for" "medical"): 75,500
+INFO:[202000.0, 1660.0, 75500.0]
+INFO:pump for
+INFO:http://www.google.com/search?hl=en&q=%22large+pump+for%22&num=50&btnG=Google+Search
+INFO:score (large pump for): 1,040,000
+INFO:http://www.google.com/search?hl=en&q=%22pump+for%22&num=50&btnG=Google+Search
+INFO:score ("pump for"): 13,200,000
+INFO:denominator ("pump for"): 13200000.0
+INFO:http://www.google.com/search?hl=en&q=%22pump+for%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("pump for" "information technology"): 3,540,000
+INFO:http://www.google.com/search?hl=en&q=%22pump+for%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("pump for" "medical"): 1,880,000
+INFO:[13200000.0, 3540000.0, 1880000.0]
+INFO:ticker for
+INFO:http://www.google.com/search?hl=en&q=%22large+ticker+for%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? (large ticker for)
+INFO:[('a', 'big'), ('a', 'large'), ('a', 'bad'), ('a', 'prominent'), ('a', 'heavy')]
+INFO:ngram result on (a big,a large,a bad,a prominent,a heavy): , 3.3155881586329393e-05, 9.267984811837475e-05, 1.6342193096837338e-05, 5.5709695061523234e-06, 1.0263775341930645e-05]
+INFO:5 <-> 5
+INFO:a big
+INFO:http://www.google.com/search?hl=en&q=%22a+big+heart%22&num=50&btnG=Google+Search
+INFO:score (a big heart): 81,800,000
+INFO:http://www.google.com/search?hl=en&q=%22a+big%22&num=50&btnG=Google+Search
+INFO:score ("a big"): 784,000,000
+INFO:denominator ("a big"): 784000000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+big%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a big" "information technology"): 9,630,000
+INFO:http://www.google.com/search?hl=en&q=%22a+big%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a big" "medical"): 225,000,000
+INFO:[784000000.0, 9630000.0, 225000000.0]
+INFO:a large
+INFO:http://www.google.com/search?hl=en&q=%22a+large+heart%22&num=50&btnG=Google+Search
+INFO:score (a large heart): 4,340,000
+INFO:http://www.google.com/search?hl=en&q=%22a+large%22&num=50&btnG=Google+Search
+INFO:score ("a large"): 719,000,000
+INFO:denominator ("a large"): 719000000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+large%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a large" "information technology"): 35,700,000
+INFO:http://www.google.com/search?hl=en&q=%22a+large%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a large" "medical"): 310,000,000
+INFO:[719000000.0, 35700000.0, 310000000.0]
+INFO:a bad
+INFO:http://www.google.com/search?hl=en&q=%22a+bad+heart%22&num=50&btnG=Google+Search
+INFO:score (a bad heart): 3,660,000
+INFO:http://www.google.com/search?hl=en&q=%22a+bad%22&num=50&btnG=Google+Search
+INFO:score ("a bad"): 309,000,000
+INFO:denominator ("a bad"): 309000000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+bad%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a bad" "information technology"): 2,920,000
+INFO:http://www.google.com/search?hl=en&q=%22a+bad%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a bad" "medical"): 80,600,000
+INFO:[309000000.0, 2920000.0, 80600000.0]
+INFO:a prominent
+INFO:http://www.google.com/search?hl=en&q=%22a+prominent+heart%22&num=50&btnG=Google+Search
+INFO:score (a prominent heart): 255,000
+INFO:http://www.google.com/search?hl=en&q=%22a+prominent%22&num=50&btnG=Google+Search
+INFO:score ("a prominent"): 40,400,000
+INFO:denominator ("a prominent"): 40400000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+prominent%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a prominent" "information technology"): 2,940,000
+INFO:http://www.google.com/search?hl=en&q=%22a+prominent%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a prominent" "medical"): 19,300,000
+INFO:[40400000.0, 2940000.0, 19300000.0]
+INFO:a heavy
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy+heart%22&num=50&btnG=Google+Search
+INFO:score (a heavy heart): 31,500,000
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy%22&num=50&btnG=Google+Search
+INFO:score ("a heavy"): 77,800,000
+INFO:denominator ("a heavy"): 77800000.0
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("a heavy" "information technology"): 2,120,000
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("a heavy" "medical"): 25,900,000
+INFO:[77800000.0, 2120000.0, 25900000.0]
+INFO:[('big', 'heart'), ('big', 'bosom'), ('big', 'pump'), ('big', 'ticker'), ('big', 'mettle'), ('large', 'heart'), ('large', 'bosom'), ('large', 'pump'), ('large', 'ticker'), ('large', 'mettle'), ('bad', 'heart'), ('bad', 'bosom'), ('bad', 'pump'), ('bad', 'ticker'), ('bad', 'mettle'), ('prominent', 'heart'), ('prominent', 'bosom'), ('prominent', 'pump'), ('prominent', 'ticker'), ('prominent', 'mettle'), ('heavy', 'heart'), ('heavy', 'bosom'), ('heavy', 'pump'), ('heavy', 'ticker'), ('heavy', 'mettle')]
+INFO:ngram result on (big heart,big bosom,big pump,big ticker,big mettle,large heart,large bosom,large pump,large ticker,large mettle,bad heart,bad bosom): , 1.4667677442995833e-07, 4.3570301440828034e-09, 4.6912499070591212e-09, 0.0, 0.0, 6.0644056887326769e-08, 9.3946337376138445e-09, 8.0916966460620188e-09, 0.0, 0.0, 8.3114574778164751e-08, 0.0]
+INFO:ngram result on (bad pump,bad ticker,bad mettle,prominent heart,prominent bosom,prominent pump,prominent ticker,prominent mettle,heavy heart,heavy bosom,heavy pump,heavy ticker): , 7.4376388381480751e-10, 0.0, 0.0, 1.9630873963431363e-09, 2.8604018598166192e-09, 0.0, 0.0, 0.0, 3.8467163202919136e-07, 2.5756419774758399e-09, 7.3983543365703974e-10, 0.0]
+INFO:ngram result on (heavy mettle): , 0.0]
+INFO:25 <-> 25
+INFO:big heart
+INFO:http://www.google.com/search?hl=en&q=%22a+big+heart%22&num=50&btnG=Google+Search
+INFO:score (a big heart): 81,800,000
+INFO:http://www.google.com/search?hl=en&q=%22big+heart+We%22&num=50&btnG=Google+Search
+INFO:score (big heart We): 571,000
+INFO:http://www.google.com/search?hl=en&q=%22big+heart%22&num=50&btnG=Google+Search
+INFO:score ("big heart"): 7,510,000
+INFO:denominator ("big heart"): 7510000.0
+INFO:http://www.google.com/search?hl=en&q=%22big+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("big heart" "information technology"): 690,000
+INFO:http://www.google.com/search?hl=en&q=%22big+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("big heart" "medical"): 818,000
+INFO:[7510000.0, 690000.0, 818000.0]
+INFO:big bosom
+INFO:http://www.google.com/search?hl=en&q=%22a+big+bosom%22&num=50&btnG=Google+Search
+INFO:score (a big bosom): 5,440,000
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom+We%22&num=50&btnG=Google+Search
+INFO:score (big bosom We): 27
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom%22&num=50&btnG=Google+Search
+INFO:score ("big bosom"): 195,000
+INFO:denominator ("big bosom"): 195000.0
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("big bosom" "information technology"): 1,590
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("big bosom" "medical"): 69,000
+INFO:[195000.0, 1590.0, 69000.0]
+INFO:big pump
+INFO:http://www.google.com/search?hl=en&q=%22a+big+pump%22&num=50&btnG=Google+Search
+INFO:score (a big pump): 600,000
+INFO:http://www.google.com/search?hl=en&q=%22big+pump+We%22&num=50&btnG=Google+Search
+INFO:score (big pump We): 49
+INFO:http://www.google.com/search?hl=en&q=%22big+pump%22&num=50&btnG=Google+Search
+INFO:score ("big pump"): 199,000
+INFO:denominator ("big pump"): 199000.0
+INFO:http://www.google.com/search?hl=en&q=%22big+pump%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("big pump" "information technology"): 4,450
+INFO:http://www.google.com/search?hl=en&q=%22big+pump%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("big pump" "medical"): 92,000
+INFO:[199000.0, 4450.0, 92000.0]
+INFO:big ticker
+INFO:big mettle
+INFO:large heart
+INFO:http://www.google.com/search?hl=en&q=%22a+large+heart%22&num=50&btnG=Google+Search
+INFO:score (a large heart): 4,340,000
+INFO:http://www.google.com/search?hl=en&q=%22large+heart+We%22&num=50&btnG=Google+Search
+INFO:score (large heart We): 318,000
+INFO:http://www.google.com/search?hl=en&q=%22large+heart%22&num=50&btnG=Google+Search
+INFO:score ("large heart"): 1,040,000
+INFO:denominator ("large heart"): 1040000.0
+INFO:http://www.google.com/search?hl=en&q=%22large+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("large heart" "information technology"): 4,080
+INFO:http://www.google.com/search?hl=en&q=%22large+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("large heart" "medical"): 3,180,000
+INFO:[1040000.0, 4080.0, 3180000.0]
+INFO:large bosom
+INFO:http://www.google.com/search?hl=en&q=%22a+large+bosom%22&num=50&btnG=Google+Search
+INFO:score (a large bosom): 1,590,000
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom+We%22&num=50&btnG=Google+Search
+INFO:score (large bosom We): 40
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom%22&num=50&btnG=Google+Search
+INFO:score ("large bosom"): 90,600
+INFO:denominator ("large bosom"): 90600.0
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("large bosom" "information technology"): 906
+INFO:http://www.google.com/search?hl=en&q=%22large+bosom%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("large bosom" "medical"): 32,100
+INFO:[90600.0, 906.0, 32100.0]
+INFO:large pump
+INFO:http://www.google.com/search?hl=en&q=%22a+large+pump%22&num=50&btnG=Google+Search
+INFO:score (a large pump): 641,000
+INFO:http://www.google.com/search?hl=en&q=%22large+pump+We%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? (large pump We)
+INFO:http://www.google.com/search?hl=en&q=%22large+pump%22&num=50&btnG=Google+Search
+INFO:score ("large pump"): 172,000
+INFO:denominator ("large pump"): 172000.0
+INFO:http://www.google.com/search?hl=en&q=%22large+pump%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("large pump" "information technology"): 7,100
+INFO:http://www.google.com/search?hl=en&q=%22large+pump%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("large pump" "medical"): 24,900
+INFO:[172000.0, 7100.0, 24900.0]
+INFO:large ticker
+INFO:large mettle
+INFO:bad heart
+INFO:http://www.google.com/search?hl=en&q=%22a+bad+heart%22&num=50&btnG=Google+Search
+INFO:score (a bad heart): 3,660,000
+INFO:http://www.google.com/search?hl=en&q=%22bad+heart+We%22&num=50&btnG=Google+Search
+INFO:score (bad heart We): 257,000
+INFO:http://www.google.com/search?hl=en&q=%22bad+heart%22&num=50&btnG=Google+Search
+INFO:score ("bad heart"): 644,000
+INFO:denominator ("bad heart"): 644000.0
+INFO:http://www.google.com/search?hl=en&q=%22bad+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("bad heart" "information technology"): 17,400
+INFO:http://www.google.com/search?hl=en&q=%22bad+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("bad heart" "medical"): 760,000
+INFO:[644000.0, 17400.0, 760000.0]
+INFO:bad bosom
+INFO:bad pump
+INFO:http://www.google.com/search?hl=en&q=%22a+bad+pump%22&num=50&btnG=Google+Search
+INFO:score (a bad pump): 861,000
+INFO:http://www.google.com/search?hl=en&q=%22bad+pump+We%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? (bad pump We)
+INFO:http://www.google.com/search?hl=en&q=%22bad+pump%22&num=50&btnG=Google+Search
+INFO:score ("bad pump"): 123,000
+INFO:denominator ("bad pump"): 123000.0
+INFO:http://www.google.com/search?hl=en&q=%22bad+pump%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("bad pump" "information technology"): 618
+INFO:http://www.google.com/search?hl=en&q=%22bad+pump%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("bad pump" "medical"): 18,100
+INFO:[123000.0, 618.0, 18100.0]
+INFO:bad ticker
+INFO:bad mettle
+INFO:prominent heart
+INFO:http://www.google.com/search?hl=en&q=%22a+prominent+heart%22&num=50&btnG=Google+Search
+INFO:score (a prominent heart): 255,000
+INFO:http://www.google.com/search?hl=en&q=%22prominent+heart+We%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? (prominent heart We)
+INFO:http://www.google.com/search?hl=en&q=%22prominent+heart%22&num=50&btnG=Google+Search
+INFO:score ("prominent heart"): 13,900
+INFO:denominator ("prominent heart"): 13900.0
+INFO:http://www.google.com/search?hl=en&q=%22prominent+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("prominent heart" "information technology"): 1,680
+INFO:http://www.google.com/search?hl=en&q=%22prominent+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("prominent heart" "medical"): 21,300
+INFO:[13900.0, 1680.0, 21300.0]
+INFO:prominent bosom
+INFO:http://www.google.com/search?hl=en&q=%22a+prominent+bosom%22&num=50&btnG=Google+Search
+INFO:score (a prominent bosom): 12,900
+INFO:http://www.google.com/search?hl=en&q=%22prominent+bosom+We%22&num=50&btnG=Google+Search
+WARNING:No google hits! (prominent bosom We)
+INFO:http://www.google.com/search?hl=en&q=%22prominent+bosom%22&num=50&btnG=Google+Search
+INFO:score ("prominent bosom"): 6,480
+INFO:denominator ("prominent bosom"): 6480.0
+INFO:http://www.google.com/search?hl=en&q=%22prominent+bosom%22+%22information+technology%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? ("prominent bosom" "information technology")
+INFO:http://www.google.com/search?hl=en&q=%22prominent+bosom%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("prominent bosom" "medical"): 986
+INFO:[6480.0, 0.0, 986.0]
+INFO:prominent pump
+INFO:prominent ticker
+INFO:prominent mettle
+INFO:heavy heart
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy+heart%22&num=50&btnG=Google+Search
+INFO:score (a heavy heart): 31,500,000
+INFO:http://www.google.com/search?hl=en&q=%22heavy+heart+We%22&num=50&btnG=Google+Search
+INFO:score (heavy heart We): 791,000
+INFO:http://www.google.com/search?hl=en&q=%22heavy+heart%22&num=50&btnG=Google+Search
+INFO:score ("heavy heart"): 2,900,000
+INFO:denominator ("heavy heart"): 2900000.0
+INFO:http://www.google.com/search?hl=en&q=%22heavy+heart%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("heavy heart" "information technology"): 121,000
+INFO:http://www.google.com/search?hl=en&q=%22heavy+heart%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("heavy heart" "medical"): 373,000
+INFO:[2900000.0, 121000.0, 373000.0]
+INFO:heavy bosom
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy+bosom%22&num=50&btnG=Google+Search
+INFO:score (a heavy bosom): 80,800
+INFO:http://www.google.com/search?hl=en&q=%22heavy+bosom+We%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? (heavy bosom We)
+INFO:http://www.google.com/search?hl=en&q=%22heavy+bosom%22&num=50&btnG=Google+Search
+INFO:score ("heavy bosom"): 10,500
+INFO:denominator ("heavy bosom"): 10500.0
+INFO:http://www.google.com/search?hl=en&q=%22heavy+bosom%22+%22information+technology%22&num=50&btnG=Google+Search
+WARNING:No match! .. no google hits? ("heavy bosom" "information technology")
+INFO:http://www.google.com/search?hl=en&q=%22heavy+bosom%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("heavy bosom" "medical"): 2,940
+INFO:[10500.0, 0.0, 2940.0]
+INFO:heavy pump
+INFO:http://www.google.com/search?hl=en&q=%22a+heavy+pump%22&num=50&btnG=Google+Search
+INFO:score (a heavy pump): 412,000
+INFO:http://www.google.com/search?hl=en&q=%22heavy+pump+We%22&num=50&btnG=Google+Search
+WARNING:No google hits! (heavy pump We)
+INFO:http://www.google.com/search?hl=en&q=%22heavy+pump%22&num=50&btnG=Google+Search
+INFO:score ("heavy pump"): 95,300
+INFO:denominator ("heavy pump"): 95300.0
+INFO:http://www.google.com/search?hl=en&q=%22heavy+pump%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("heavy pump" "information technology"): 4,400
+INFO:http://www.google.com/search?hl=en&q=%22heavy+pump%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("heavy pump" "medical"): 66,900
+INFO:[95300.0, 4400.0, 66900.0]
+INFO:heavy ticker
+INFO:heavy mettle
+INFO:[('heart', 'We'), ('bosom', 'We'), ('pump', 'We'), ('ticker', 'We'), ('mettle', 'We')]
+INFO:ngram result on (heart We,bosom We,pump We,ticker We,mettle We): , 1.241232146694434e-08, 2.5060264974285928e-10, 0.0, 0.0, 0.0]
+INFO:5 <-> 5
+INFO:heart We
+INFO:http://www.google.com/search?hl=en&q=%22big+heart+We%22&num=50&btnG=Google+Search
+INFO:score (big heart We): 571,000
+INFO:http://www.google.com/search?hl=en&q=%22heart+We%22&num=50&btnG=Google+Search
+INFO:score ("heart We"): 4,190,000
+INFO:denominator ("heart We"): 4190000.0
+INFO:http://www.google.com/search?hl=en&q=%22heart+We%22+%22information+technology%22&num=50&btnG=Google+Search
+INFO:score ("heart We" "information technology"): 369,000
+INFO:http://www.google.com/search?hl=en&q=%22heart+We%22+%22medical%22&num=50&btnG=Google+Search
+INFO:score ("heart We" "medical"): 3,870,000
+INFO:[4190000.0, 369000.0, 3870000.0]
+INFO:bosom We
+INFO:http://www.google.com/search?hl=en&q=%22big+bosom+We%22&num=50&btnG=Google+Search
+INFO:score (big bosom We): 27
