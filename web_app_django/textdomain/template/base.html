@@ -136,7 +136,78 @@
     
 	});
 	</script>
-	{% endif %}	
+	{% endif %}
+	
+<script type="text/javascript">
+	$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'frequency_container',
+                type: 'area'
+            },
+            title: {
+                text: 'Frequency Distribution Chart'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                labels: {
+                    formatter: function() {
+                        return this.value; // clean, unformatted number for year
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Frequency Count'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value;
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return this.series.name +' frequency : <b>'+
+                        Highcharts.numberFormat(this.y, 0) +'</b>';
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart: 1,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [ {
+                name: 'IT',
+                data: [{{itData}}]
+            }, {
+                name: 'Medical',
+                data: [{{medData}}]
+            },{
+                name: 'General',
+                data: [{{genData}} ]
+            }
+			]
+        });
+    });
+    
+});
+
+</script>	
 </head>
 
 <body>

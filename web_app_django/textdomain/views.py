@@ -21,6 +21,7 @@ def home(request):
 		analyse = request.GET.get('analyse', '')
 
 		if id:
+					
 				text = Text.objects.get(id=id)
 
 
@@ -32,7 +33,7 @@ def home(request):
 					token.analyzeWords()
 
 				if len(text.words.all()) > 0:
-
+					
 					words = text.words.all()
 					wordcount = []
 					
@@ -52,7 +53,7 @@ def home(request):
 
 					for w in range(wordrange):
 						wordname += "'%s',"%(wordcount[w].name)
-
+						
 					for w in range(wordrange):
 						wordcounted += "%i, "%(int(wordcount[w].count))
 		
@@ -87,8 +88,24 @@ def home(request):
 					
 					paragraph_tokens = re.findall(r'\w+', text.text)
 					total_tokens =  len(paragraph_tokens)
-										
+						
+					itTerms = []
+					medTerms = []
+					
 					for domain in domains:
+					
+						#STUB FOR FREQUENCY CHARTS STARTS
+						if domain.name == "IT":
+							#print "Yes IT"
+							itTerms = domain.terms.all()
+									
+						
+						if domain.name == "MEDICAL":
+							#print "Yes Medical"
+							medTerms = domain.terms.all()
+													
+						#STUB FOR FREQUENCY CHARTS ENDS
+						
 						terms = domain.terms.all()
 						termlist=[]
 		
@@ -112,15 +129,61 @@ def home(request):
 								blacklist_count += 1
 					
 					#print "Blacklist Items: " + str(blacklist_count)					
-					context['blacklist_count'] = str(blacklist_count) 
-					
-					
+					context['blacklist_count'] = str(blacklist_count) 					
 					context['general_domain'] =  str(total_tokens - int(context['MEDICAL']) - int(context['IT']) - blacklist_count)	
 
 					print str(total_tokens) + " " + context['IT'] + " " + context['blacklist_count'] 
 					
 					# Pie Charts Work Ends Here.
 				
+					
+					# Frequency Distribution Work Starts Here
+					wordrange = total_tokens
+					
+					
+					if len(wordcount) < wordrange:
+						wordrange = len(wordcount)
+					
+					itTermList = []
+					medTermList = []
+					blackTermList = []
+					
+					for term in itTerms: 
+						itTermList.append(term.name.upper())
+						
+					for term in medTerms: 
+						medTermList.append(term.name.upper())
+						
+					for term in blacklist:
+						blackTermList.append(str(term).upper())	
+					
+					itData = ''
+					medData = ''
+					genData = ''
+					blackData = ''
+					
+					#print range(wordrange)
+					for w in range(wordrange):
+						#wordname += "'%s',"%(wordcount[w].name)
+						if wordcount[w].name.upper() in itTermList:
+							itData += "%i, "%(int(wordcount[w].count))
+							#print  "IT" + " " +(wordcount[w].name) + " " + str(wordcount[w].count)
+						elif wordcount[w].name.upper() in medTermList:
+							#print  "MED" + " " +(wordcount[w].name) + " " + str(wordcount[w].count)
+							medData += "%i, "%(int(wordcount[w].count))
+						elif wordcount[w].name.upper() in blackTermList:
+							blackData += "%i, "%(int(wordcount[w].count))
+							
+						else:	
+							#print  "GEN" + " " +(wordcount[w].name) + " " + str(wordcount[w].count)
+							genData += "%i, "%(int(wordcount[w].count))
+					
+					context['itData'] = itData
+					context['medData'] = medData
+					context['genData'] = genData
+					context['blackData'] = blackData
+					
+					# Frequency Distribution Work Ends Here
 				
 				
 
